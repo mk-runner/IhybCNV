@@ -12,6 +12,7 @@ Its code will be updated as soon as possible
     - biopython     1.78
     - combo         0.1.1
     - numpy         1.18.5
+    - pandas        1.0.5
     - pysam         0.16.0.1
     - pyod          0.8.4
     - rpy2          3.4.2
