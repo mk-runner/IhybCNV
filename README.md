@@ -48,7 +48,10 @@ clf.fit(X)
 labels = clf.labels_
 
 ```
-
+# Real Dataset
+You can obtain the real data set in the following 2 ways.
+- 链接：https://pan.baidu.com/s/1uy8jsBcWD4z4oKXW-tCFrw 提取码：omnw 复制这段内容后打开百度网盘手机App，操作更方便哦
+- [1000 Genomes Project](https://www.internationalgenome.org/)
 
 # Required Dependencies
 1. Python 3.8            
