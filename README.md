@@ -63,5 +63,3 @@ labels = clf.labels_
     - scipy         1.5.0
 2. R 3.4.4
     - DNAcopy
-
-
