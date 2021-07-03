@@ -1,5 +1,5 @@
-# ELCNV
-An ensemble learning approach to detect CNVs from NGS data using ELCNV </br>
+# IhybCNV
+IhybCNV: an Intra-hybrid Approach for CNV Detection from Next-Generation Sequencing Data </br>
 
 # Usage
 1. API for the entire process
@@ -23,7 +23,7 @@ if __name__ == '__main__':
 # (3) If you want to know more detailed introduction, you can check this `main` function in the `run.py`
 ```
 
-2. API only for the core module of the ELCNV
+2. API only for the core module of the IhybCNV
 ```python
 from elcnv import ELCNV
 
