@@ -4,7 +4,7 @@ IhybCNV: an Intra-hybrid Approach for CNV Detection from Next-Generation Sequenc
 # Usage
 1. API for the entire process
    
-   (1) open the file `run.py`, and modify the variables `bam_path` and `fa_path` inside;
+(1) open the file `run.py`, and modify the variables `bam_path` and `fa_path` inside;
    
 ```python
 if __name__ == '__main__':
