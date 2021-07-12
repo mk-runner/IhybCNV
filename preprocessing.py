@@ -10,7 +10,7 @@ from cbs import segment
 
 
 def read_bam_file(filename):
-    samfile = pysam.AlignmentFile(filename, "rb")
+    samfile = pysam.AlignmentFile(filename, "rb", ignore_truncation=True)
     chr_list = samfile.references
     return chr_list
 
@@ -22,7 +22,7 @@ def binning(ref, chr_len, bam_path, bin_size=1000):
     init_rd = np.full((23, chr_max_num), 0.0)
     # read bam file and get bin rd
     print("Read bam file: " + str(bam_path))
-    samfile = pysam.AlignmentFile(bam_path, "rb")
+    samfile = pysam.AlignmentFile(bam_path, "rb", ignore_truncation=True)
     for line in samfile:
         idx = int(line.pos / bin_size)
         if line.reference_name == '21':
