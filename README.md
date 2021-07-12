@@ -54,7 +54,7 @@ labels = clf.labels_
 ```
 # Real Dataset
 You can obtain the real data set in the following 2 ways.
-- clink this link：https://pan.baidu.com/s/1uy8jsBcWD4z4oKXW-tCFrw extraction code：omnw
+- clink this link：https://pan.baidu.com/s/1Ja4XH2wZupeAcwc9qhZn8A extraction code：29to
 - [1000 Genomes Project](https://www.internationalgenome.org/)
 
 # Required Dependencies
