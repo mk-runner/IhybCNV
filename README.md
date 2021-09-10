@@ -24,7 +24,7 @@ if __name__ == '__main__':
 ```
    (2) run the `run.py`;
    
-   (3) if you want to know more detailed introduction, you can check this `main` function in the file `run.py`.
+   (3) check this `main` function in the file `run.py` for more information.
 
 2. API only for the core module of the IhybCNV
 
