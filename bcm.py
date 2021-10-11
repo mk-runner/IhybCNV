@@ -1,5 +1,5 @@
 # -*-coding:utf-8-*-
-"""Non-parametric Adaptive Threshold (NPAT)
+"""A Binary Clustering Model (BCM)
 """
 # Author: Kang Liu <kangliu@stu.xidian.edu.cn>
 
@@ -12,9 +12,9 @@ from sklearn.cluster import KMeans
 from sklearn.utils.validation import check_array
 
 
-class NPAT(object):
+class BCM(object):
     """
-    A new non-parametric adaptive threshold without an assumption of
+    A new binary clustering model without an assumption of
     any distributions.
     This method first employs the kernel density estimation (KDE) method
     with default parameters to estimate the probability density function
