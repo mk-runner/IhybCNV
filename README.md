@@ -34,18 +34,18 @@ from ihybcnv import IhybCNV
 ihybcnv = IhybCNV()
 
 # 0 stands for inliers and 1 for outliers(CNVs).
-# labels with different merging strategies are obtained by the IhybCNV and the NPAT method
+# labels with different merging strategies are obtained by the IhybCNV and the BCM method
 labels = ihybcnv.fit_predict(X) 
 
 # If you only need anomaly score vectors with different merging strategies.
 scores = ihybcnv.decision_function(X)
 ```
 
-3. API only for the NPAT method
+3. API only for the BCM method
 ```python
-from npat import NPAT
+from bcm import BCM
 
-clf = NPAT()
+clf = BCM()
 clf.fit(X)
 
 # 0 stands for inliers and 1 for outliers(CNVs).
