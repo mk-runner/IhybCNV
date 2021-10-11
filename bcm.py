@@ -32,7 +32,7 @@ class BCM(object):
 
     is_require_X : bool, optional (default=False)
         When calculating the probability density of the outlier score vector, whether
-        the original data X is required..
+        the original data X is required.
 
     Attributes
     ----------
