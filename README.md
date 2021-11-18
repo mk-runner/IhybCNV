@@ -1,5 +1,5 @@
 # IhybCNV
-IhybCNV: an Intra-hybrid Approach for CNV Detection from Next-Generation Sequencing Data </br>
+IhybCNV: An intra-hybrid approach for CNV detection from next-generation sequencing data </br>
 
 # Usage
 1. API for the entire process
@@ -70,3 +70,6 @@ The real datasets can be obtained in the following 2 ways.
     - scipy         1.5.0
 2. R 3.4.4
     - DNAcopy
+# Link for IhybCNV
+https://doi.org/10.1016/j.dsp.2021.103304
+https://www.sciencedirect.com/science/article/pii/S1051200421003432
