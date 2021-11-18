@@ -71,5 +71,7 @@ The real datasets can be obtained in the following 2 ways.
 2. R 3.4.4
     - DNAcopy
 # Link for IhybCNV
-https://doi.org/10.1016/j.dsp.2021.103304
-https://www.sciencedirect.com/science/article/pii/S1051200421003432
+https://doi.org/10.1016/j.dsp.2021.103304 </br>
+https://www.sciencedirect.com/science/article/pii/S1051200421003432 </br>
+Note that you should cite this paper if you use this code.
+
