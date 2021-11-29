@@ -81,7 +81,7 @@ The real datasets can be obtained in the following 2 ways.
 
 # Citing IhybCNV
 
-IhybCNV is published in Digital Signal Processing. If you use this code in your work, we would like to cite the following paper.
+[IhybCNV](https://www.sciencedirect.com/science/article/pii/S1051200421003432?via%3Dihub) is published in [Digital Signal Processing](https://www.journals.elsevier.com/digital-signal-processing). If you use this code in your work, we would like to cite the following paper.
 
 ```
 @article{XIE2022103304,
