@@ -1,11 +1,13 @@
 # IhybCNV
+
 IhybCNV: An intra-hybrid approach for CNV detection from next-generation sequencing data </br>
 
 # Usage
+
 1. API for the entire process
-   
+
 (1) open the file `run.py`, and modify the variables `bam_path` and `fa_path` inside;
-   
+
 ```python
 if __name__ == '__main__':
     # Local path of the *.bam file
@@ -22,8 +24,9 @@ if __name__ == '__main__':
 
     main(bam_path, fa_path, gt_path=gt_path, bin_size=bin_size, cbs_imp='python')
 ```
+
    (2) run the `run.py`;
-   
+
    (3) check the `main` function in the file `run.py` for more information.
 
 2. API only for the core module of the IhybCNV
@@ -42,6 +45,7 @@ scores = ihybcnv.decision_function(X)
 ```
 
 3. API only for the BCM method
+
 ```python
 from bcm import BCM
 
@@ -52,26 +56,44 @@ clf.fit(X)
 labels = clf.labels_
 
 ```
+
 # Real Datasets
+
 The real datasets can be obtained in the following 2 ways.
+
 - clink this link：https://pan.baidu.com/s/1Ja4XH2wZupeAcwc9qhZn8A extraction code：29to
 - [1000 Genomes Project](https://www.internationalgenome.org/)
 
 # Required Dependencies
+
 1. Python 3.8            
-    - biopython     1.78
-    - combo         0.1.1
-    - numpy         1.18.5
-    - pandas        1.0.5
-    - pysam         0.16.0.1
-    - pyod          0.8.4
-    - rpy2          3.4.2
-    - scikit-learn  0.23.1
-    - scipy         1.5.0
+   - biopython     1.78
+   - combo         0.1.1
+   - numpy         1.18.5
+   - pandas        1.0.5
+   - pysam         0.16.0.1
+   - pyod          0.8.4
+   - rpy2          3.4.2
+   - scikit-learn  0.23.1
+   - scipy         1.5.0
 2. R 3.4.4
-    - DNAcopy
-# Link for IhybCNV
-https://doi.org/10.1016/j.dsp.2021.103304 </br>
-https://www.sciencedirect.com/science/article/pii/S1051200421003432 </br>
-Note that you should cite this paper if you use this code.
+   - DNAcopy
+
+# Citing IhybCNV
+
+IhybCNV is published in Digital Signal Processing. If you use this code in your work, we would like to cite the following paper.
+
+```
+@article{XIE2022103304,
+	title = {IhybCNV: An intra-hybrid approach for CNV detection from next-generation sequencing data},
+	journal = {Digital Signal Processing},
+	volume = {121},
+	pages = {103304},
+	year = {2022},
+	issn = {1051-2004},
+	doi = {https://doi.org/10.1016/j.dsp.2021.103304},
+	url = {https://www.sciencedirect.com/science/article/pii/S1051200421003432},
+	author = {Kun Xie and Kang Liu and Haque A.K. Alvi and Wenyue Ji and Shuzhen Wang and Liang Chang and Xiguo Yuan},
+}
+```
 
