@@ -17,7 +17,7 @@ from pyod.models.iforest import IForest
 from pyod.models.so_gaal import SO_GAAL
 from combo.models.detector_lscp import LSCP
 
-from npat import NPAT
+from bcm import BCM
 
 
 class IhybCNV(object):
@@ -32,11 +32,11 @@ class IhybCNV(object):
         following strategies (i.e., ["voting", "maximum", "lscp", "averaging"]).
 
     is_require_X : bool, optional (default=False)
-        When calculating the probability density of the outlier score vector for all segments in NPAT,
+        When calculating the probability density of the outlier score vector for all segments in BCM,
         whether the original data X is required.
 
     bandwidth : float, optional (default=1.0)
-        When calculating the probability density of the outlier score vector for all segments in NPAT,
+        When calculating the probability density of the outlier score vector for all segments in BCM,
         the bandwidth of the kernel.
 
     Attributes
@@ -119,8 +119,8 @@ class IhybCNV(object):
             clf = detectors[i].fit(scale_X)
             self.scores_base_[:, i] = clf.decision_function(scale_X)
 
-            # obtain a series of binary labels using the NPAT method
-            _npat = NPAT(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
+            # obtain a series of binary labels using the BCM
+            _npat = BCM(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
             _npat.fit(self.scores_base_[:, i].reshape(-1, 1))
             self.labels_base_[:, i] = _npat.labels_
 
@@ -136,8 +136,8 @@ class IhybCNV(object):
                 # the maximum of five outlier scores for each segment
                 self.scores_[:, i] = np.max(_scale_score, axis=1)
 
-                # obtain binary labels with the NPAT method
-                _npat = NPAT(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
+                # obtain binary labels with BCM
+                _npat = BCM(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
                 _npat.fit(self.scores_[:, i].reshape(-1, 1))
                 self.labels_[:, i] = _npat.labels_
 
@@ -146,16 +146,16 @@ class IhybCNV(object):
                 clf.fit(scale_X)
                 self.scores_[:, i] = clf.decision_function(scale_X)
 
-                # obtain binary labels with the NPAT method
-                _npat = NPAT(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
+                # obtain binary labels with the BCM
+                _npat = BCM(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
                 _npat.fit(self.scores_[:, i].reshape(-1, 1))
                 self.labels_[:, i] = _npat.labels_
 
             elif self.scores_comb[i] == "averaging":
                 self.scores_[:, i] = np.mean(_scale_score, axis=1)
 
-                # obtain binary labels with the NPAT method
-                _npat = NPAT(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
+                # obtain binary labels with the BCM
+                _npat = BCM(X=scale_X, is_require_X=self.is_require_X, bandwidth=self.bandwidth)
                 _npat.fit(self.scores_[:, i].reshape(-1, 1))
                 self.labels_[:, i] = _npat.labels_
 
