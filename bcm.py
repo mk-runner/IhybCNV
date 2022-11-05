@@ -70,7 +70,7 @@ class BCM(object):
         kde.fit(anomaly_scores)
         proba = np.exp(kde.score_samples(anomaly_scores))
 
-        cluster = KMeans(n_clusters=2)
+        cluster = KMeans(n_clusters=2, algorithm="elkan")
         _labels = cluster.fit_predict(proba.reshape(-1, 1))
         anomal_label = np.argmin(cluster.cluster_centers_)
         self.labels_ = _labels == anomal_label
