@@ -14,7 +14,7 @@ from sklearn.utils.validation import check_array
 
 class BCM(object):
     """
-    A new binary clustering model without an assumption of
+    A new binary clustering model (BCM) without an assumption of
     any distributions.
     This method first employs the kernel density estimation (KDE) method
     with default parameters to estimate the probability density function
@@ -39,6 +39,13 @@ class BCM(object):
     labels_ : numpy array of shape (n_samples, )
             Binary labels of all merging strategies to indicate whether each segment is a CNV.
             0 stands for inlier and 1 for outlier(CNV).
+            
+    Examples:
+        .. testcode::
+
+            clf = BCM()
+            labels = clf.fit_predict(anomaly_scores.reshape(-1, 1))
+
     """
     def __init__(self, X=None, bandwidth=1.0, is_require_X=False):
         self.X = X
