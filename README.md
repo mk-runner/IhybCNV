@@ -54,7 +54,8 @@ scores = ihybcnv.decision_function(X)
     of the outlier score vector, then leverages the 2-means method to
     bi-cluster its probability density. 
     
-    This model can convert anomaly scores into a collective of binary labels that can 		indicate whether each       point is outliers or not.
+    This model can convert anomaly scores into a collective of binary labels that can 		
+    indicate whether each point is outliers or not.
 '''
 from bcm import BCM
 
