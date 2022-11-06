@@ -47,6 +47,15 @@ scores = ihybcnv.decision_function(X)
 3. API only for the BCM method
 
 ```python
+'''
+    A new non-parametric adaptive threshold without an assumption of any distributions.
+    This method first employs the kernel density estimation (KDE) method
+    with default parameters to estimate the probability density function
+    of the outlier score vector, then leverages the 2-means method to
+    bi-cluster its probability density. 
+    
+    This model can convert anomaly scores into a collective of binary labels that can 		indicate whether each       point is outliers or not.
+'''
 from bcm import BCM
 
 clf = BCM()
