@@ -75,10 +75,10 @@ class BCM(object):
             self.X = check_array(self.X)
             anomaly_scores = np.hstack((self.X, anomaly_scores))
         kde.fit(anomaly_scores)
-        # proba = np.exp(kde.score_samples(anomaly_scores))  # original version
+        proba = np.exp(kde.score_samples(anomaly_scores))  # original version
         # note that since the original version added an exponential function, 
         # it will reduce the density difference between inlier and outlier samples.
-        proba = kde.score_samples(anomaly_scores)   # log likelihood
+        # proba = kde.score_samples(anomaly_scores)   # log likelihood
 
         cluster = KMeans(n_clusters=2, algorithm="elkan")
         _labels = cluster.fit_predict(proba.reshape(-1, 1))
