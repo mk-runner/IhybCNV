@@ -101,7 +101,7 @@ The real datasets can be obtained in the following 2 ways.
 	pages = {103304},
 	year = {2022},
 	issn = {1051-2004},
-	doi = {https://doi.org/10.1016/j.dsp.2021.103304},
+	doi = {10.1016/j.dsp.2021.103304},
 	url = {https://www.sciencedirect.com/science/article/pii/S1051200421003432},
 	author = {Kun Xie and Kang Liu and Haque A.K. Alvi and Wenyue Ji and Shuzhen Wang and Liang Chang and Xiguo Yuan},
 }
